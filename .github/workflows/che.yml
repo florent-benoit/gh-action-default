@@ -1,0 +1,18 @@
+# Add Che link on PRs
+name: che
+
+on:
+  pull_request: 
+    types: [opened, synchronize]
+
+jobs:
+  add-link:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Che Triage Action
+        id: che-triage
+        uses: benoitf/che-pr-check-gh-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
