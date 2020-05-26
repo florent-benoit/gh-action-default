@@ -9,7 +9,7 @@ jobs:
   add-link:
     runs-on: ubuntu-latest
     steps:
-      - name: Che Triage Action
+      - name: Eclipse Che Pull Request Check
         id: che-pr-check-gh-action
         uses: benoitf/che-pr-check-gh-action@master
         with:
